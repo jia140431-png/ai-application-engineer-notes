@@ -2,9 +2,22 @@
 
 [返回目录](../README.md)
 
-来源：05.1—05.6 是补充复习，单元划分为重新组织；05.7—05.8 基于已取回原课提炼，并结合官方概念核对。所有内容均非逐字讲义。
+本页保留初版速查，深入复习请进入下表的独立正文。模块 05 的真实课名现已按分享对话第八讲的课程表核对；前五讲目前只有课名和摘要线索，没有完整正文。前五节的短笔记是补充复习，不宣称还原原课。
 
-## 05.1 Spring AI 与能力集成
+| 原课 | 已核对课名或核心内容 | 整理状态 |
+|---|---|---|
+| 01 | Spring AI 框架定位与核心组件 | 速查；待原文 |
+| 02 | ChatClient、Advisor、Tool Calling 循环 | 速查；待原文 |
+| 03 | State、Memory、Checkpoint、Event Log | 速查；待原文 |
+| 04 | LangGraph、Node、Edge、Reducer、Super-step | 速查；待原文 |
+| 05 | MCP 协议、工具发现、传输与权限 | 速查；待原文 |
+| 06 | Multi-Agent 多智能体协作原理 | [第一批独立正文](module-05/06-multi-agent.md) |
+| 07 | Human-in-the-loop 在 Agent 框架中的实现原理 | [第一批独立正文](module-05/07-human-in-the-loop.md) |
+| 08 | Agent 技术架构全景与框架选型 | [第一批独立正文](module-05/08-architecture-selection.md) |
+
+第 05 讲原课标题侧重 MCP；A2A 的详细内容见第六讲。下方仍有相关补充概念，不代表原课安排。
+
+## 05.1 Spring AI 框架定位与核心组件
 
 Spring AI 为 Spring 应用提供模型能力集成，ChatClient 提供构造 Prompt 与获取响应的调用方式，支持同步与流式交互。应区分业务服务、模型客户端与外部模型服务的职责。[官方文档](https://docs.spring.io/spring-ai/reference/api/chatclient.html)
 
@@ -12,7 +25,7 @@ Spring AI 为 Spring 应用提供模型能力集成，ChatClient 提供构造 Pr
 
 自测：接入 ChatClient 后，业务权限和事务是否由框架自动解决？
 
-## 05.2 框架中的 Tool Calling
+## 05.2 ChatClient、Advisor、Tool Calling 循环
 
 模型适配层负责传递工具定义、接收工具请求；工具分发层将其映射到可调用能力；业务服务校验并执行。即使框架自动完成多轮工具循环，也需要看清调用次数、超时、异常和结果回传。
 
@@ -22,7 +35,7 @@ Spring AI 为 Spring 应用提供模型能力集成，ChatClient 提供构造 Pr
 
 自测：同一轮模型提出两个会修改同一订单的调用，应检查什么？
 
-## 05.3 State 与 Checkpoint
+## 05.3 State、Memory、Checkpoint、Event Log
 
 State 是任务数据，Checkpoint 是执行到某个边界时保存的状态及运行进度。消息历史主要描述对话，Checkpoint 主要支持恢复，两者用途不同。
 
@@ -32,7 +45,7 @@ State 是任务数据，Checkpoint 是执行到某个边界时保存的状态及
 
 自测：有 Checkpoint 为什么仍可能重复发送消息？
 
-## 05.4 图编排与状态转移
+## 05.4 LangGraph、Node、Edge、Reducer、Super-step
 
 Node 执行工作，Edge 表达流转，State 传递数据。条件边把业务结果映射到下一节点；并行分支汇合时，需要定义如何合并多个状态更新，不能默认覆盖顺序正确。
 
@@ -42,7 +55,7 @@ Node 执行工作，Edge 表达流转，State 传递数据。条件边把业务�
 
 自测：两个分支同时写同一个状态字段，可能发生什么？
 
-## 05.5 MCP 与 A2A
+## 05.5 MCP 协议、工具发现、传输与权限
 
 MCP 标准化 AI 应用连接外部工具与数据的方式，A2A 关注 Agent 间互操作；它们不是模型，也不是业务数据库事务方案。可以在一个系统中分别承担不同连接职责。[MCP](https://modelcontextprotocol.io/docs/getting-started/intro) · [A2A](https://a2a-protocol.org/latest/)
 
@@ -52,7 +65,9 @@ MCP 标准化 AI 应用连接外部工具与数据的方式，A2A 关注 Agent �
 
 自测：为什么 MCP 和 A2A 通常不是简单的二选一？
 
-## 05.6 Multi-Agent 协作模式
+## 05.6 Multi-Agent 多智能体协作原理
+
+[完整整理正文](module-05/06-multi-agent.md)。本节仅为速查。
 
 Supervisor 统一分派并汇总；Router 选择处理者；Handoff 转交当前交互或控制责任；Peer-to-Peer 允许相对分散协作。具体框架对这些名称的实现可能不同，需要看实际控制流。
 
@@ -63,6 +78,8 @@ Supervisor 统一分派并汇总；Router 选择处理者；Handoff 转交当前
 自测：多 Agent 为什么可能比一个 Agent 更慢、更不稳定？
 
 ## 05.7 Human-in-the-loop：暂停与恢复
+
+[完整整理正文](module-05/07-human-in-the-loop.md)。本节仅为速查。
 
 **原对话第七讲整理。** 持久化等待保存状态后释放执行资源；它与一直占用线程等待不同。LangGraph 的动态中断通常配合 checkpointer 和相同 `thread_id`，外部通过 `Command(resume=...)` 提供恢复值。
 
@@ -86,6 +103,8 @@ flowchart TD
 自测：审批节点前调用建单接口，三小时后恢复，最危险的结果是什么？
 
 ## 05.8 架构全景与选型
+
+[完整整理正文](module-05/08-architecture-selection.md)。本节仅为速查。
 
 **原对话第八讲整理。** 技术应放到职责层次比较：集成层负责模型和工具适配，编排层负责控制流及恢复，协议层连接外部能力，业务层决定权限与操作是否成立。
 

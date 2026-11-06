@@ -1,6 +1,6 @@
 # 模块 05 · 第六讲：Multi-Agent 多智能体协作原理
 
-[总目录](../../README.md) · [模块目录](../05-orchestration.md) · [下一讲：HITL](07-human-in-the-loop.md)
+[总目录](../../README.md) · [模块目录](../05-orchestration.md) · [上一讲：MCP](05-mcp.md) · [下一讲：HITL](07-human-in-the-loop.md)
 
 **来源**：[用户提供的课程分享对话](https://chatgpt.com/share/6aec9acb-f970-83ea-aca2-8fcaff04a9b5)，第六讲正文。本文按原课知识顺序重写，恢复案例、对比和面试问题；标注“补充解释”的部分为新整理。不是逐字转录，原互动控件不在 Markdown 中运行。
 

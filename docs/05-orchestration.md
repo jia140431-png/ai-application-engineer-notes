@@ -2,20 +2,20 @@
 
 [返回目录](../README.md)
 
-本页保留初版速查，深入复习请进入下表的独立正文。模块 05 的真实课名现已按分享对话第八讲的课程表核对；前五讲目前只有课名和摘要线索，没有完整正文。前五节的短笔记是补充复习，不宣称还原原课。
+模块 05 的 8 讲现已全部从可读取的原课正文整理为独立笔记。本页下半部保留初版速查，深入学习请进入下表。真实标题按正文核对；第一讲原题含“实战”，后续按用户要求转为原理扫盲，不要求编码。
 
-| 原课 | 已核对课名或核心内容 | 整理状态 |
+| 原课 | 已核对标题 | 独立正文 |
 |---|---|---|
-| 01 | Spring AI 框架定位与核心组件 | 速查；待原文 |
-| 02 | ChatClient、Advisor、Tool Calling 循环 | 速查；待原文 |
-| 03 | State、Memory、Checkpoint、Event Log | 速查；待原文 |
-| 04 | LangGraph、Node、Edge、Reducer、Super-step | 速查；待原文 |
-| 05 | MCP 协议、工具发现、传输与权限 | 速查；待原文 |
-| 06 | Multi-Agent 多智能体协作原理 | [第一批独立正文](module-05/06-multi-agent.md) |
-| 07 | Human-in-the-loop 在 Agent 框架中的实现原理 | [第一批独立正文](module-05/07-human-in-the-loop.md) |
-| 08 | Agent 技术架构全景与框架选型 | [第一批独立正文](module-05/08-architecture-selection.md) |
+| 01 | Spring AI 与 Agent 框架实战入门 | [第二批](module-05/01-spring-ai-introduction.md) |
+| 02 | Spring AI 的架构原理与工具调用机制 | [第二批](module-05/02-tool-calling-internals.md) |
+| 03 | Agent State、Memory 与 Checkpoint 的底层原理 | [第二批](module-05/03-state-memory-checkpoint.md) |
+| 04 | LangGraph 与图编排的底层原理 | [第二批](module-05/04-langgraph.md) |
+| 05 | MCP 协议的底层机制与工具生态 | [第二批](module-05/05-mcp.md) |
+| 06 | Multi-Agent 多智能体协作原理 | [第一批](module-05/06-multi-agent.md) |
+| 07 | Human-in-the-loop 在 Agent 框架中的实现原理 | [第一批](module-05/07-human-in-the-loop.md) |
+| 08 | Agent 技术架构全景与框架选型 | [第一批](module-05/08-architecture-selection.md) |
 
-第 05 讲原课标题侧重 MCP；A2A 的详细内容见第六讲。下方仍有相关补充概念，不代表原课安排。
+以下速查来自初版概念重组，不能用其节名替代真实课名。特别是第五节中的 A2A 也在真实第六讲详细展开。
 
 ## 05.1 Spring AI 框架定位与核心组件
 

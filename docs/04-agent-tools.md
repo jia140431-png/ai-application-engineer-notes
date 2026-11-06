@@ -1,6 +1,21 @@
 # 模块 04：Agent 与工具调用（8 个复习单元）
 
-[返回目录](../README.md) · 来源：补充复习，原课正文未取回。
+[返回目录](../README.md)
+
+模块 04 八讲已按取得的原课正文重写，深入学习从下表进入。下半部保留初版补充速查，其主题顺序不是原课逐讲安排，不用于替代真实目录。
+
+| 原课 | 已核对课名 | 深入正文 |
+|---|---|---|
+| 01 | Agent 的本质、决策循环与 Workflow 的区别 | [进入](module-04/01-agent-workflow.md) |
+| 02 | ReAct——Agent 如何在行动与观察中完成任务 | [进入](module-04/02-react.md) |
+| 03 | Agent Planning 与任务分解 | [进入](module-04/03-planning.md) |
+| 04 | Tool Engineering——让 Agent 安全可靠地使用工具 | [进入](module-04/04-tool-engineering.md) |
+| 05 | Agent Memory 与 Context Engineering | [进入](module-04/05-memory-context.md) |
+| 06 | Human-in-the-loop 与可靠执行 | [进入](module-04/06-hitl-reliability.md) |
+| 07 | Agent 安全与效果评估 | [进入](module-04/07-security-evaluation.md) |
+| 08 | 生产级 Agent 系统设计 | [进入](module-04/08-production-design.md) |
+
+第一讲以原课路线表中的本讲名称命名，其余按原文标题核对。共有 34 道原课检验及解析，新增练习另作标记。代码改为机制说明，不要求搭建项目；模块 05 再进一步讨论框架内部实现。
 
 ## 04.1 Agent 和 Workflow
 

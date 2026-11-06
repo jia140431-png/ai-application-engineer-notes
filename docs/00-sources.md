@@ -35,14 +35,22 @@
 
 本批可核对的知识检验：第二、三、四讲各 5 道；第一讲是项目验收清单，已明确改成新编概念检查；第五讲互动只显示第一题，未还原未知题目。新增练习均有标记。
 
+## 模块 04 完整整理（第三批，2026-11-07）
+
+核对此前保存的七讲，并从原聊天重新读取第六讲《Human-in-the-loop 与可靠执行》，补齐快照窗口漏段。模块 04 八讲均有可读取的课程正文支撑；第一讲原文从模块路线与本讲内容开始，标题依据原课路线表，而不是声称取回了原本不存在于快照中的标题行。
+
+原课可见检验数量为：第一至四讲各 4 道、第五讲 5 道、第六讲 4 道、第七讲 5 道、第八讲 4 道，共 34 道，已保留考点并附解析。第八讲另有 10 项验收检查，整理为学习清单，不声称实际完成测试。新增练习均明确标识。
+
+企业消息案例仅保留通用架构与课程边界，不将自动回群、审批入口等写成已验证功能，也不把课程建议的开发路线当成用户履历。源码式教学内容按当前扫盲需求改为原理、契约与纸上推演。
+
 ## 内容标识
 
-- **补充复习 / 初版速查**：模块 01—04 的旧笔记与模块 05 索引下半部，仍非按原文逐讲重做。
-- **课程正文整理重写**：`module-05/` 下 8 讲独立文档；有可读取的课程正文支撑，仍非逐字转录。
+- **补充复习 / 初版速查**：模块 01—03 的旧笔记，以及模块 04、05 索引下半部，仍非按原文逐讲重做。
+- **课程正文整理重写**：`module-04/` 与 `module-05/` 下共 16 讲独立文档；有可读取的课程正文支撑，仍非逐字转录。
 - **补充解释 / 新增练习**：对原课边界的解释、扩展例子及新增问题，独立标记。
 - **原对话复盘 + 补充**：RAG 排查案例。
 
-模块 01—04 已保存的材料等待逐讲核对与整理，状态见[分批进度](09-expansion-progress.md)。不再要求用户为了此前读取窗口的限制重复提供整份材料；若后续确认局部缺失，再明确说明具体范围。
+模块 01—03 已保存的材料等待逐讲核对与整理，状态见[分批进度](09-expansion-progress.md)。不再要求用户为了此前读取窗口的限制重复提供整份材料；若后续确认局部缺失，再明确说明具体范围。
 
 ## 版本核对（2026-11-06）
 
@@ -66,3 +74,5 @@ Spring AI 第二讲按原课 2.0 语境保留 Advisor 工具循环；不将此�
 这里没有复用招聘信息、薪资结论或课程助手的能力评分。各框架的版本兼容性、完整能力和部署要求，应另外按目标环境核实。
 
 第二批补充核对：[Spring AI Advisors](https://docs.spring.io/spring-ai/reference/api/advisors.html)、[Tool Calling](https://docs.spring.io/spring-ai/reference/api/tools.html)、[LangGraph Persistence](https://docs.langchain.com/oss/python/langgraph/persistence)、[Graph API](https://docs.langchain.com/oss/python/langgraph/graph-api)、[MCP 2026-07-28 Architecture](https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture)。
+
+第三批参考核对：[ReAct 原论文](https://arxiv.org/abs/2210.03629)、[Building Effective Agents](https://www.anthropic.com/research/building-effective-agents)、[OWASP Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/)。这些来源用于概念核对，主要内容依据用户课程重写，不将历史文章视作最新 SDK 指南。
